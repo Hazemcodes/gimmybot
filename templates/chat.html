@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/styles.css" />
+        <title>Gimmy</title>
+        <style>
+            form {
+                background-color: rgb(114, 114, 114);
+            }
+            input {
+                color: rgb(253, 165, 0);
+                font-size: 20px;
+            }
+            input.button {
+                color: rgb(253, 120, 11);
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <form action="/chat" method="post">
+                <fieldset>
+                    <legend style="color: red; font-size: 25px;">Chat with Gimmy:</legend>
+                    <p><input type="text" name="nm" /></p>
+                    <input class="button" type="submit" value="submit" onclick="start()" />
+                    {% if message %}
+                    <h3 class="message">{{ message | safe }}</h3>
+                    {% endif %}
+                </fieldset>
+            </form>
+            <button onclick="showDiv()" type="button">show Audio</button>
+            <div id="show" style="display: none;">
+                <audio id="myAudio">
+                    <source src="{{ url_for('static', filename='../static/mp3/Burn.mp3') }}" />
+                    Your browser does not support the audio element.
+                </audio>
+                <p style="font-size: 20px;">Click the buttons to play or pause the audio.</p>
+                <button onclick="playAudio()" type="button">Play Audio</button>
+                <button onclick="pauseAudio()" type="button">Pause Audio</button>
+            </div>
+            <script>
+                var x = document.getElementById("myAudio");
+
+                function showDiv() {
+                    var show = document.getElementById("show");
+                    if (show.style.display === "none") {
+                        show.style.display = "block";
+                    } else {
+                        show.style.display = "none";
+                    }
+                }
+                function playAudio() {
+                    x.play();
+                }
+
+                function pauseAudio() {
+                    x.pause();
+                }
+
+                function start() {}
+            </script>
+        </div>
+        <div style="margin: 0px 35px;">
+            <h2 style="color:rgb(255, 255, 255)">Try to say :</h2>
+            <ul>
+              <li>hi</li>
+              <li>who are you</li>
+              <li>my location</li>
+              <li>my ip address</li>
+              <li>my name</li>
+              <li>who is your developer</li>
+              <li>my location</li>
+              <li>...etc</li>
+            </ul>
+        </div>
+    </body>
+</html>

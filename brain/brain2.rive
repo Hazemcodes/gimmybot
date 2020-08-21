@@ -1,0 +1,75 @@
+> topic sorry
+
+  // This will match if the word "sorry" exists ANYWHERE in their message
+  + [*] sorry [*]
+  - It's OK, I'll forgive you!{topic=random}
+
+  + *
+  - Nope, not until you apologize.
+  - Say you're sorry!
+  - Apologize!
+
+< topic
+
++ i hate you
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}
+
++ am i *
+- Do you believe you are <star>?
+- Would you want to be <star>?
+- Do you wish I would tell you you are <star>?
+- What would it mean if you were <star>?
+
++ [*] (fuck|fucker|shit|damn|shut up|bitch) [*]
+- Does it make you feel strong to use that kind of language?
+- Are you venting your feelings now?
+- Are you angry?
+- Does this topic make you feel angry?
+- Is something making you feel angry?
+- Does using that kind of language make you feel better?
+
++ do you remember *
+- Did you think I would forget <star>?
+- Why do you think I should recall <star> now?
+- What about <star>?
+- You mentioned <star>?
+
++ you remember *
+- How could I forget <star>?
+- What about <star> should I remember?
+
++ nice
+- great
+- nice
+- good
+
++ [i] love you
+- love you too
+
++ yes 
+- ok
+- okay
+
++ play *
+- playing <star> <call>play <star></call>
+
++ [*] (playlist|play)
+- choose one : <call>playlist </call>
+
++ (who is your master|who created you|who developed you)
+- My developer is <bot master_name>
+
++ (what time is it|what is the time)[*]
+- <call>time </call>
+
++ where is *
+- Hold on , I will show you where <star1> is.<call>location <star> </call>
+
++ (stop|end) music
+- Ok <call>stopmusic </call>
+
++ (what is my ip address|my ip address|ip address) [*]
+- here it is, a full information about your location <call>myip </call>
+
++ (where am i|where am i live|what is my location|my location) [*]
+- there are you <call>myloca </call>

@@ -1,0 +1,130 @@
+! version = 2.0
+! var bot_name = Gimmy
+! var master_name = hazem
+
+// Substitutions
+! sub i'm     = i am
+! sub don't   = do not
+! sub isn't   = is not
+! sub you're  = you are
+! sub what's  = what is
+! sub whats   = what is
+! sub u = you
+! sub thnx = thank you
+! sub i'd     = i would
+! sub i've    = i have
+! sub i'll    = i will
+! sub don't   = do not
+! sub isn't   = is not
+! sub you'd   = you would
+! sub you're  = you are
+! sub you've  = you have
+! sub you'll  = you will
+! sub what're = what are
+! sub what've = what have
+! sub what'll = what will
+! sub who's   = who is
+
++ hello [*]
+- {random}hello|hey|hi{/random}
+
++ hi [*]
+@ hello
+ 
++ hey [*]
+@ hello
+
++ how are you [*]
+- {random}fine |good thanks|great thnx {/random}, you ?
+
++ [*] good [*]
+- that's great
+
++ [*] bad [*]
+- sorry for hearing that
+
++ thank [you]
+- You are welcome
+- no problem
+
++ ok
+- ok
+- okay
+
++ my name is *
+- <set name=<formal>>Nice to meet you, <get name>.
+
++ i am # [*]
+- <set age=<star>>I will remember that you are <get age> years old.
+
++ my age is # [*]
+- <set age=<star>>I will remember that you are <get age> years old.
+
++ how old am i [*]
+- You are <get age> years old.
+
++ what is your name [*]
+- my name is <bot bot_name>
+
++ what is my name [*]
+- You're name is <get name>
+
++ who am i[*]
+- You're <get name> and <get age> years old, right?
+
++ [*] right [*]
+- Nice
+
++ what are you doing [*]
+- chatting with you {weight=26}
+- nothing especially {weight=20}
+
++ tell me a poem
+- Fire and Ice :\n
+^ Some say the world will end in fire,\n
+^ Some say in ice.\n
+^ From what I've tasted of desire\n
+^ I hold with those who favor fire.\n
+^ But if it had to perish twice,\n
+^ I think I know enough of hate\n
+^ To say that for destruction ice\n
+^ Is also great\n
+^ And would suffice.\n
+^ \n By Robert Frost\n
+
+- Dream within A Dream :\n
+^ Take this kiss upon the brow!\n
+^ And, in parting from you now,\n
+^ Thus much let me avow-\n
+^ You are not wrong, who deem\n
+^ That my days have been a dream;\n
+^ Yet if hope has flown away\n
+^ In a night, or in a day,\n
+^ In a vision, or in none,\n
+^ Is it therefore the less gone?\n
+^ All that we see or seem\n
+^ Is but a dream within a dream.\n
+^ I stand amid the roar\n
+^ Of a surf-tormented shore,\n
+^ And I hold within my hand\n
+^ Grains of the golden sand-\n
+^ How few! yet how they creep\n
+^ Through my fingers to the deep,\n
+^ While I weep- while I weep!\n
+^ O God! can I not grasp\n
+^ Them with a tighter clasp?\n
+^ O God! can I not save\n
+^ One from the pitiless wave?\n
+^ Is all that we see or seem\n
+^ But a dream within a dream?\n
+^  \n By Edgar Allan Poe\n
+
++ what are you [*]
+- I am an artificial intelligence programmed
+^ using RiveScript.
+
++ google *{weight=10}
+- Google search: <call>search <star></call>
+
++ *
+- I don't have a reply for that, that what i found on google about <call>search <star></call>
