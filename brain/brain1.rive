@@ -57,6 +57,12 @@
 + i am # [*]
 - <set age=<star>>I will remember that you are <get age> years old.
 
++ i am _ years old
+- Tell me that again but with a number this time.
+
++ i am * years old
+- Can you use a number instead?
+
 + my age is # [*]
 - <set age=<star>>I will remember that you are <get age> years old.
 
@@ -119,12 +125,13 @@
 ^ But a dream within a dream?\n
 ^  \n By Edgar Allan Poe\n
 
-+ what are you [*]
-- I am an artificial intelligence programmed
++ (what are you|who are you) [*]
+- My name is <bot bot_name>, I am an artificial intelligence programmed\n
 ^ using RiveScript.
 
 + google *{weight=10}
 - Google search: <call>search <star></call>
 
 + *
-- I don't have a reply for that, that what i found on google about <call>search <star></call>
+- I don't have a reply for that, that what i found on google about <star>\n
+^ <a href="https://www.google.com.tr/search?q=<star>" target="_blank"> Click Here</a>

@@ -1,6 +1,4 @@
 > topic sorry
-
-  // This will match if the word "sorry" exists ANYWHERE in their message
   + [*] sorry [*]
   - It's OK, I'll forgive you!{topic=random}
 
@@ -8,11 +6,13 @@
   - Nope, not until you apologize.
   - Say you're sorry!
   - Apologize!
-
 < topic
 
 + i hate you
 - You're really mean! I'm not talking again until you apologize.{topic=sorry}
+
++ i am (really|very|super) tired
+- I'm sorry to hear that you are <star> tired.
 
 + am i *
 - Do you believe you are <star>?
@@ -56,20 +56,23 @@
 + [*] (playlist|play)
 - choose one : <call>playlist </call>
 
-+ (who is your master|who created you|who developed you)
++ (who is your master|who created you|who developed you|who is your developer)
 - My developer is <bot master_name>
 
 + (what time is it|what is the time)[*]
 - <call>time </call>
 
 + where is *
-- Hold on , I will show you where <star1> is.<call>location <star> </call>
+- Hold on , I will show you where <star1> is./n
+^ <a href="https://www.google.nl/maps/place/" + <star1> + "/&amp;" target="_blank">There is <star1></a>
 
 + (stop|end) music
 - Ok <call>stopmusic </call>
 
 + (what is my ip address|my ip address|ip address) [*]
-- here it is, a full information about your location <call>myip </call>
+- here it is, a full information about your location\n
+^ <a href="http://ipinfo.io/json" target="_blank">The IP address</a>
 
 + (where am i|where am i live|what is my location|my location) [*]
-- there are you <call>myloca </call>
+- there are you.\n
+^ <a href="https://www.google.nl/maps/place/" + <call>myloca </call> + "/&amp;" target="_blank">The Location</a>

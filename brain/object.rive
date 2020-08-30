@@ -1,31 +1,12 @@
-> object search python
-import googleSearch
-word = ""
-for i in range(len(args)):
-    word = word + " " + str(args[i])
-googleSearch.search(word)
-return word
-< object
-
 > object myloca python
 import googleSearch
 googleSearch.mylocation()
-< object
-
-> object myip python
-import googleSearch
-googleSearch.myip()
 < object
 
 > object time python
 from time import ctime
 time = ctime()
 return time
-< object
-
-> object location python
-import googleSearch
-googleSearch.location(str(args[0]))
 < object
 
 > object play python

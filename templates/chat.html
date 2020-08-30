@@ -7,9 +7,6 @@
         <link rel="stylesheet" type="text/css" href="../static/CSS/styles.css" />
         <title>Gimmy</title>
         <style>
-            form {
-                background-color: rgb(114, 114, 114);
-            }
             input {
                 color: rgb(253, 165, 0);
                 font-size: 20px;
@@ -38,7 +35,7 @@
                     <source src="{{ url_for('static', filename='../static/mp3/Burn.mp3') }}" />
                     Your browser does not support the audio element.
                 </audio>
-                <p style="font-size: 20px;">Click the buttons to play or pause the audio.</p>
+                <p>Click the buttons to play or pause the audio.</p>
                 <button onclick="playAudio()" type="button">Play Audio</button>
                 <button onclick="pauseAudio()" type="button">Pause Audio</button>
             </div>
@@ -65,7 +62,7 @@
             </script>
         </div>
         <div style="margin: 0px 35px;">
-            <h2 style="color:rgb(255, 255, 255)">Try to say :</h2>
+            <h2 style="color:black">Try to say :</h2>
             <ul>
               <li>hi</li>
               <li>who are you</li>
@@ -74,8 +71,16 @@
               <li>my name</li>
               <li>who is your developer</li>
               <li>my location</li>
+              <li>tell me a poem</li>
               <li>...etc</li>
             </ul>
+        </div>
+        <div class="footer">
+            <div class="row">
+                  <div class="column"><h2 style="color: rgb(51, 255, 0) ; margin: 0px;">GimmyBot</h2></div>
+                  <div class="column"><br> CreatedBy: Hazem Ahmed <br> Gmail: hazeemahmed22@gmail.com <br> Github Code: <a href="https://github.com/Hazemcodes/gimmybot">Click Here</a></div>
+                  <div class="column" style="text-align: center;"> <br> <a style="color: black" href="/" class="previous round ">&laquo;</a></div>
+                </div>
         </div>
     </body>
 </html>
