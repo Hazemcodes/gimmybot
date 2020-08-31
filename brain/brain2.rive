@@ -63,16 +63,16 @@
 - <call>time </call>
 
 + where is *
-- Hold on , I will show you where <star1> is./n
-^ <a href="https://www.google.nl/maps/place/" + <star1> + "/&amp;" target="_blank">There is <star1></a>
+- Hold on , I will show you where <star1> is. \n
+^ <a href="https://www.google.nl/maps/place/ <star1> /&amp;" target="_blank">There is <star1></a>
 
 + (stop|end) music
 - Ok <call>stopmusic </call>
 
 + (what is my ip address|my ip address|ip address) [*]
-- here it is, a full information about your location\n
+- here it is, a full information about your location \n
 ^ <a href="http://ipinfo.io/json" target="_blank">The IP address</a>
 
 + (where am i|where am i live|what is my location|my location) [*]
 - there are you.\n
-^ <a href="https://www.google.nl/maps/place/" + <call>myloca </call> + "/&amp;" target="_blank">The Location</a>
+^ <a href="https://www.google.nl/maps/place/&amp;" target="_blank">The Location</a>

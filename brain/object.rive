@@ -1,8 +1,3 @@
-> object myloca python
-import googleSearch
-googleSearch.mylocation()
-< object
-
 > object time python
 from time import ctime
 time = ctime()

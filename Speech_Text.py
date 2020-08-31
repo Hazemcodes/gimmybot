@@ -40,13 +40,5 @@ def jarvis(data):
         url = "https://www.google.nl/maps/place/" + location + "/&amp;"
         return webbrowser.open_new_tab(url)
 
-#
-# # initialization
-# time.sleep(2)
-# speak("Hi, what can I do for you?")
-# while 1:
-#
-#     data = recordAudio()
-#     jarvis(data)
 if __name__ == '__main__':
     jarvis("where is")
