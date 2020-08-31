@@ -10,10 +10,10 @@ font-size: 20px;
 }
 p {
 font-size: 20px;
-color:gray;
+color:black;
 }
 div.center {
-  background-color: black;
+  background-color: gray;
   margin: auto;
   width: 70%;
   border: 4px solid rgb(255, 255, 0);
