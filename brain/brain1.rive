@@ -54,11 +54,11 @@
 + my name is *
 - <set name=<formal>>Nice to meet you, <get name>.
 
++ i am _ [*]
+- <set name=<formal>>Nice to meet you, <get name>.
+
 + i am # [*]
 - <set age=<star>>I will remember that you are <get age> years old.
-
-+ i am _ years old
-- Tell me that again but with a number this time.
 
 + i am * years old
 - Can you use a number instead?
