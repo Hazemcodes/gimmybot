@@ -1,86 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="../static/CSS/styles.css" />
-        <title>Gimmy</title>
-        <style>
-            input {
-                color: rgb(253, 165, 0);
-                font-size: 20px;
-            }
-            input.button {
-                color: rgb(253, 120, 11);
-                font-size: 25px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="center">
-            <form action="/chat" method="post">
-                <fieldset>
-                    <legend style="color: red; font-size: 25px;">Chat with Gimmy:</legend>
-                    <p><input type="text" name="nm" /></p>
-                    <input class="button" type="submit" value="submit" onclick="start()" />
-                    {% if message %}
-                    <h3 class="message">{{ message | safe }}</h3>
-                    {% endif %}
-                </fieldset>
-            </form>
-            <button onclick="showDiv()" type="button">show Audio</button>
-            <div id="show" style="display: none;">
-                <audio id="myAudio">
-                    <source src="{{ url_for('static', filename='../static/mp3/Burn.mp3') }}" />
-                    Your browser does not support the audio element.
-                </audio>
-                <p>Click the buttons to play or pause the audio.</p>
-                <button onclick="playAudio()" type="button">Play Audio</button>
-                <button onclick="pauseAudio()" type="button">Pause Audio</button>
-            </div>
-            <script>
-                var x = document.getElementById("myAudio");
 
-                function showDiv() {
-                    var show = document.getElementById("show");
-                    if (show.style.display === "none") {
-                        show.style.display = "block";
-                    } else {
-                        show.style.display = "none";
-                    }
-                }
-                function playAudio() {
-                    x.play();
-                }
+  <head>
+    <meta charset="UTF-8">
+    <title>GimmyBot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../static/CSS/styles.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-                function pauseAudio() {
-                    x.pause();
-                }
+  </head>
 
-                function start() {}
-            </script>
-        </div>
-        <div style="margin: 0px 35px;">
-            <h2 style="color:black">Try to say :</h2>
-            <ul>
-              <li>hi</li>
-              <li>who are you</li>
-              <li>my location</li>
-              <li>my ip address</li>
-              <li>my name</li>
-              <li>who is your developer</li>
-              <li>my location</li>
-              <li>tell me a poem</li>
-              <li>...etc</li>
-            </ul>
-        </div>
-        <div class="footer">
-            <div class="row">
-                  <div class="column"><h2 style="color: rgb(51, 255, 0) ; margin: 0px;">GimmyBot</h2></div>
-                  <div class="column"><br> CreatedBy: Hazem Ahmed <br> Gmail: hazeemahmed22@gmail.com <br> Github Code: <a href="https://github.com/Hazemcodes/gimmybot">Click Here</a></div>
-                  <div class="column" style="text-align: center;"> <br> <a style="color: black" href="/" class="previous round ">&laquo;</a></div>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div id="page-container" >
+      <div class="navbar">
+        <div class="row">
+          <div class="column"><h2 style="color: rgb(51, 255, 0) ; margin: 0px;">GimmyBot</h2></div>
+        
+          <div class="column">
+            <!-- Social Media icons -->
+            <a href="https://github.com/Hazemcodes/gimmybot" class='fab fa-github' style='font-size:30px;color: rgb(207, 0, 207);'></a>
+            <a href="https://www.google.com/" class="fab fa-google" style='font-size:30px;color:red'></a>
+            <a href="https://en-gb.facebook.com/" class="fab fa-facebook" style='font-size:30px;color:blue'></a>
+            <a href="https://www.linkedin.com/" class='fab fa-linkedin' style='font-size:30px;color:rgb(197, 0, 0)'></a>
+          </div>
+
+        <div class="column" style="text-align: center;"> <h3 style='font-size:15px;color: rgb(6, 224, 177);'>Created By : Hazem Ahmed</h3></div>
+
+      </div>  
+      </div>
+
+      <div id="content-wrap">
+          <section class="msger">
+            <header class="msger-header">
+              <div class="msger-header-title">
+                <i class="fas fa-robot"></i> Gimmy Chatbot <i class="fas fa-robot"></i>
+              </div>
+          </header>
+          
+          <main class="msger-chat">
+            <div class="msg left-msg">
+              <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
+  
+              <div class="msg-bubble">
+                <div class="msg-info">
+                  <div class="msg-info-name">Gimmy</div>
+                  <div class="msg-info-time">12:45</div>
                 </div>
-        </div>
-    </body>
+  
+                <div class="msg-text">
+                  Welcome, hi my name is Gimmy! Go ahead and send me a message. 😄
+                </div>
+              </div>
+            </div>
+  
+          </main>
+          
+        
+          <form class="msger-inputarea">
+            <input type="text" name="nm" class="msger-input" id="textInput" placeholder="Enter your message...">
+            <button type="submit" class="msger-send-btn">Send</button>
+          </form>
+          </section>
+       </div>
+    </div>
+  
+    <script>
+
+      const msgerForm = get(".msger-inputarea");
+      const msgerInput = get(".msger-input");
+      const msgerChat = get(".msger-chat");
+
+
+      // Icons made by Freepik from www.flaticon.com
+      const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
+      const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
+      const BOT_NAME = "Gimmy";
+      const PERSON_NAME = "You";
+
+      msgerForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const msgText = msgerInput.value;
+        if (!msgText) return;
+
+        appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+        msgerInput.value = "";
+        botResponse(msgText);
+      });
+
+      function appendMessage(name, img, side, text) {
+        //   Simple solution for small apps
+        const msgHTML = `
+  <div class="msg ${side}-msg">
+    <div class="msg-img" style="background-image: url(${img})"></div>
+    <div class="msg-bubble">
+      <div class="msg-info">
+        <div class="msg-info-name">${name}</div>
+        <div class="msg-info-time">${formatDate(new Date())}</div>
+      </div>
+      <div class="msg-text">${text}</div>
+    </div>
+  </div>
+  `;
+
+        msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+        msgerChat.scrollTop += 500;
+      }
+
+      function botResponse(rawText) {
+
+        // Bot Response
+        $.get("/get", { msg: rawText }).done(function (data) {
+          console.log(rawText);
+          console.log(data);
+          const msgText = data;
+          appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+        });
+
+      }
+
+
+      // Utils
+      function get(selector, root = document) {
+        return root.querySelector(selector);
+      }
+
+      function formatDate(date) {
+        const h = "0" + date.getHours();
+        const m = "0" + date.getMinutes();
+
+        return `${h.slice(-2)}:${m.slice(-2)}`;
+      }
+
+
+
+    </script>
+  </body>
 </html>

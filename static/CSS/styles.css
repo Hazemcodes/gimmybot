@@ -1,24 +1,167 @@
-h3 {
-  color:rgb(51, 255, 0);
+
+:root {
+  --msger-bg: #fff;
+  --border: 2px solid #ddd;
+  --left-msg-bg: #4b0044;
+  --right-msg-bg: #19eca6;
 }
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 body {
-  background-color:rgb(255, 172, 0); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: var(--body-bg);
+  font-family: Helvetica, sans-serif;
+  background-color:rgb(0, 116, 67); 
+
 }
+
+.msger {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 867px;
+  height: 100%;
+  border: var(--border);
+  border-radius: 5px;
+  background: var(--msger-bg);
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.msger-header {
+  /* display: flex; */
+  font-size: medium;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  border-bottom: var(--border);
+  background: #eee;
+  color: #666;
+}
+
+.msger-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+.msger-chat::-webkit-scrollbar {
+  width: 6px;
+}
+.msger-chat::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.msger-chat::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+}
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.msg-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.msg-bubble {
+  max-width: 450px;
+  padding: 15px;
+  border-radius: 15px;
+  background: var(--left-msg-bg);
+}
+.msg-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.msg-info-name {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.msg-info-time {
+  font-size: 0.85em;
+}
+
+.left-msg .msg-bubble {
+  border-bottom-left-radius: 0;
+  color: rgb(248, 241, 241);
+}
+
+.right-msg {
+  flex-direction: row-reverse;
+}
+.right-msg .msg-bubble {
+  background: var(--right-msg-bg);
+  color: #fff;
+  border-bottom-right-radius: 0;
+}
+.right-msg .msg-img {
+  margin: 0 0 0 10px;
+}
+
+.msger-inputarea {
+  display: flex;
+  padding: 10px;
+  border-top: var(--border);
+  background: #eee;
+}
+.msger-inputarea * {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+}
+.msger-input {
+  flex: 1;
+  background: #ddd;
+}
+.msger-send-btn {
+  margin-left: 10px;
+  background: rgb(0, 196, 65);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+.msger-send-btn:hover {
+  background: rgb(0, 180, 50);
+}
+
+.msger-chat {
+  background-color:rgb(121, 0, 105);
+}
+
 li {
 color: red;
 font-size: 20px;
 }
+
 p {
 font-size: 20px;
 color:black;
 }
-div.center {
-  background-color: gray;
-  margin: auto;
-  width: 70%;
-  border: 4px solid rgb(255, 255, 0);
-  padding: 5px;
-}
+
 button {
 padding:2px 15px;
 font-size:20px;
@@ -28,17 +171,7 @@ color:red;
 button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.footer{
-  position: fixed;
-  font-size: 17px;
-  background-color: gray;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: left;
-  padding: 5px;
-}
+
 .column {
   float: left;
   width: 33%;
@@ -49,11 +182,6 @@ button:hover {
   content: "";
   display: table;
   clear: both;
-}
-@media screen and (max-width: 600px) {
-.column {
-    width: 100%;
-  }
 }
 
 .previous:hover {
@@ -71,4 +199,55 @@ button:hover {
 
 .round {
   border-radius: 50%;
+}
+
+.fab {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fab:hover {
+    opacity: 0.7;
+}
+
+.fab-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fab-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fab-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+#page-container {
+  min-height: 500px;
+  width: 100%;
+  height: 100%;
+  padding: 80px 0px;
+}
+
+#content-wrap {
+  padding: 3% 15%;    /* Footer height */
+}
+
+.navbar{
+  border-top:1px solid #034eff;
+  position:absolute;
+  text-align: center;
+  font-size: 15px;
+  right:0;
+  left:0;
+  top: 0;
+  background-color: black;
+  color: white;
 }
