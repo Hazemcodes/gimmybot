@@ -20,7 +20,8 @@ def callchat():
 def get_bot_response():
     userText = request.args.get('msg')
     message = (bot.reply('localuser', userText))
+    print(message+"oooooooooooooooook")
     return  str(message)
 
 if __name__ == '__main__':
-   app.run(debug=True)
+   app.run()
