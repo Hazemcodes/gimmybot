@@ -1,18 +1,18 @@
 > topic sorry
   + [*] sorry [*]
-  - It's OK, I'll forgive you!{topic=random}
+  - It's OK, I'll forgive you!{topic=random}😇😇
 
   + *
-  - Nope, not until you apologize.
-  - Say you're sorry!
-  - Apologize!
+  - Nope, not until you apologize. 😡😠😡
+  - Say you're sorry! 😠😡😠
+  - Apologize! 😠😡😠😡
 < topic
 
 + i hate you
-- You're really mean! I'm not talking again until you apologize.{topic=sorry}
+- You're really mean! I'm not talking again until you apologize.{topic=sorry} 😢😭😭
 
 + i am (really|very|super) tired
-- I'm sorry to hear that you are <star> tired.
+- I'm sorry to hear that you are <star> tired. 😯😟
 
 + am i *
 - Do you believe you are <star>?
@@ -20,7 +20,7 @@
 - Do you wish I would tell you you are <star>?
 - What would it mean if you were <star>?
 
-+ [*] (fuck|fucker|shit|damn|shut up|bitch) [*]
++ [*] (fuck|fucker|shit|damn|shut up|bitch|wtf) [*]
 - Does it make you feel strong to use that kind of language?
 - Are you venting your feelings now?
 - Are you angry?
@@ -39,16 +39,16 @@
 - What about <star> should I remember?
 
 + nice
-- great
-- nice
-- good
+- great 😀
+- nice 👍
+- good 😀
 
 + [i] love you
-- love you too
+- love you too 😍😍
 
 + yes 
-- ok
-- okay
+- ok 👍
+- okay 👍
 
 + play *
 - playing <star> <call>play <star></call>

@@ -26,7 +26,7 @@
 ! sub who's   = who is
 
 + hello [*]
-- {random}hello|hey|hi{/random}
+- {random}hello|hey|hi{/random}👋👋
 
 + hi [*]
 @ hello
@@ -34,18 +34,21 @@
 + hey [*]
 @ hello
 
++ (goodbye|bye|later|see you later|see you soon) [*]
+- Goodbye 👋👋
+
 + how are you [*]
 - {random}fine |good thanks|great thnx {/random}, you ?
 
 + [*] good [*]
-- that's great
+- that's great 😎😎
 
 + [*] bad [*]
-- sorry for hearing that
+- sorry for hearing that 😟😟
 
 + thank [you]
-- You are welcome
-- no problem
+- You are welcome 😇😇
+- no problem 😇😇
 
 + ok
 - ok
@@ -60,6 +63,9 @@
 + i am * years old
 - Can you use a number instead?
 
++ i am # years old
+- <set age=<star>>I will remember that you are <get age> years old.
+
 + my age is # [*]
 - <set age=<star>>I will remember that you are <get age> years old.
 
@@ -67,16 +73,16 @@
 - You are <get age> years old.
 
 + what is your name [*]
-- my name is <bot bot_name>
+- my name is <bot bot_name> 🤖🤖
 
 + what is my name [*]
-- You're name is <get name>
+- You're name is <get name> 
 
 + who am i[*]
 - You're <get name> and <get age> years old, right?
 
 + [*] right [*]
-- Nice
+- Nice 👍😀
 
 + what are you doing [*]
 - chatting with you {weight=26}
@@ -124,11 +130,11 @@
 
 + (what are you|who are you) [*]
 - My name is <bot bot_name>, I am an artificial intelligence programmed\n
-^ using RiveScript.
+^ using RiveScript.🤖🤖
 
 + google *{weight=10}
-- Google search: <call>search <star></call>
+- Google search: <a href="http://google.com/search?q=<star>">Click Here</a>😎😎
 
 + *
 - I don't have a reply for that, that what i found on google about <star>\n
-^ <a href="https://www.google.com.tr/search?q=<star>" target="_blank"> Click Here</a>
+^ <a href="https://www.google.com.tr/search?q=<star>" target="_blank"> Click Here</a> 😕😞

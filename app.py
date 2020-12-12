@@ -30,3 +30,6 @@ def get_bot_response():
     userText = request.args.get('msg')
     message = (bot.reply('localuser', userText))
     return  str(message)
+
+if __name__ == '__main__':
+    app.run()
